@@ -81,26 +81,51 @@ organization owns the repository, and you can add other owners.
 
 From now on, any change committed on GitHub is live in a minute or two.
 
-## 6. Mailing list: Buttondown (15 min)
+## 6. Mailing list: Brevo (20 min)
 
-Buttondown is simple, ad-free and works with a plain form on the site. It's
-free up to 100 subscribers, then about $9/month up to 1,000.
+Same tool as Mere Editions, but a separate Brevo account for Text + Pix so the
+two lists never mix and the collective's list can be handed over cleanly.
+The free plan allows unlimited contacts and 300 emails a day, with a small
+Brevo logo in each email. If the list grows past 300, a blast would take more
+than one day on the free plan; the entry-level paid plan removes that limit.
 
-- [ ] Sign up with the shared Gmail. Choose the username `textpix`.
-- [ ] Settings: newsletter name "Text + Pix Collective", reply-to
-      hello@textpix.org. Turn on double opt-in.
-- [ ] Ask Lauren and Mesha for the existing contact list, and import it as a CSV.
-- [ ] In `src/_data/site.yaml`, set `buttondown: textpix`. The site's "Email us"
-      button becomes a working sign-up form.
-
-If the list will clearly pass 100 people soon, MailerLite or Mailchimp have
-larger free tiers. Only the form in `src/_includes/signup.njk` would change.
+- [ ] Sign up at brevo.com with the shared Gmail. Company name "Text + Pix
+      Collective", website textpix.org.
+- [ ] Senders & IP → Domains: add textpix.org and authenticate it. Brevo shows
+      a few DNS records; add them in Cloudflare (DNS → Records). This keeps
+      email from hello@textpix.org out of spam folders.
+- [ ] Senders: add hello@textpix.org as the sender (the confirmation email
+      arrives through the forwarding set up in step 3).
+- [ ] Contacts → Lists: create a list called "Text + Pix mailing list". Add
+      sub-lists later as needed (e.g. one per semester, Manchester
+      participants, publication buyers).
+- [ ] Ask Lauren and Mesha for the existing contact list and import it as a CSV
+      into that list.
+- [ ] Contacts → Forms → Create a subscription form tied to that list, with
+      double opt-in on. Under the form's success settings, redirect to
+      `https://textpix.org/thanks/`.
+- [ ] Open the form's "Share" step. Copy:
+  - the **embed code**: find `action="https://...sibforms.com/serve/..."`
+    in it and paste that address into `brevo: form_action:` in
+    `src/_data/site.yaml`, and
+  - the **shareable link** into `brevo: form_link:` (used as a backup and
+    handy for flyers and QR codes).
+- [ ] After the site redeploys, sign up with a test address and confirm it
+      lands in the list.
 
 ## 7. Sign-ups for each gathering (5 min per event)
 
-- [ ] For each meeting, make a Google Form in the shared account: name, email,
-      affiliation (optional). Responses collect in a Google Sheet.
-- [ ] Paste the form link as `rsvp:` on that event in `src/_data/events.yaml`.
+Two ways; pick one and stick with it.
+
+- **Brevo** (keeps everything in one place): for each meeting, make a Brevo
+  list such as "RSVP 2026-10-26" and a form that feeds it, asking for name and
+  email, with a checkbox for "also add me to the mailing list". You can then
+  email that meeting's attendees directly (reminders, room changes).
+- **Google Forms** (simplest): one form per meeting in the shared Google
+  account; responses collect in a Sheet.
+
+Either way, paste the form's shareable link as `rsvp:` on that event in
+`src/_data/events.yaml`. A "Reserve a seat" button appears.
 
 ## 8. Selling publications (decide before the first one)
 

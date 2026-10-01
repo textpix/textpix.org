@@ -13,9 +13,16 @@ venue:
   name: CDS Library, Center for Documentary Studies
   address: 1317 W. Pettigrew St., Durham, NC
 
-# Buttondown username for the mailing list (the part after buttondown.com/).
-# Until this is filled in, the sign-up form links to the email address above.
-buttondown: ""
+# Mailing list (Brevo). Fill in whichever you have; leave the rest blank.
+#   form_action: the "action" address from the HTML of your Brevo sign-up
+#                form (starts with https://...sibforms.com/serve/). Shows the
+#                site's own styled form.
+#   form_link:   the shareable link to the Brevo-hosted form. Used if
+#                form_action is blank, as a "Join the mailing list" button.
+# With both blank, the button opens an email to the address above.
+brevo:
+  form_action: ""
+  form_link: ""
 
 social:
   instagram: ""   # e.g. https://www.instagram.com/textpixcollective

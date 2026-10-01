@@ -12,7 +12,7 @@ You'll almost never touch anything outside `src/_data/`.
 |---|---|
 | Add or change a gathering | `src/_data/events.yaml` |
 | Add a publication for sale | `src/_data/publications.yaml` |
-| Change the email, venue, social links, organizers | `src/_data/site.yaml` |
+| Change the email, venue, mailing-list form, social links, organizers | `src/_data/site.yaml` |
 | Change the About page wording | `src/about.njk` |
 | Change colors or fonts | top of `src/assets/style.css` |
 
@@ -24,9 +24,13 @@ and appear in the Archive (the Archive catches up the next time anything is
 pushed). After a meeting, add a `recap:` line and maybe an `image:` so the
 archive entry has some life to it.
 
-**Sign-ups for a gathering:** make a Google Form (in the shared Text + Pix
-Google account so responses land in one place), copy its link, and paste it
-as `rsvp:` on the event. A "Reserve a seat" button appears.
+**Sign-ups for a gathering:** make a Brevo form (or a Google Form) for the
+meeting, copy its shareable link, and paste it as `rsvp:` on the event. A
+"Reserve a seat" button appears.
+
+**Mailing list:** the sign-up form in every page footer sends addresses to
+Brevo. Its settings are under `brevo:` in `src/_data/site.yaml`; SETUP.md
+step 6 explains where to find them.
 
 **Selling a publication:** create a Stripe Payment Link for it and paste the
 link as `buy:`. Put a cover image in `src/assets/img/`.

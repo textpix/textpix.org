@@ -191,3 +191,4 @@ main { padding: 0 var(--gutter) 4rem; }
   .site-footer { grid-template-columns: 1fr; }
   .site-header { flex-direction: column; align-items: flex-start; }
 }
+.signup .trap { position: absolute; left: -5000px; width: 1px; height: 1px; opacity: 0; }
