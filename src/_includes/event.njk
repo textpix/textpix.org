@@ -1,0 +1,25 @@
+{# One event row. Expects `e` and `site`; set `past` for archive styling. #}
+<article class="event{% if past %} event-past{% endif %}"{% if not past %} data-event-date="{{ e.date | isoDate }}"{% endif %}>
+  <p class="event-date">
+    <time datetime="{{ e.date | isoDate }}">
+      <span class="event-day">{{ e.date | dayNum }}</span>
+      <span class="event-month">{{ e.date | monthName }}</span>
+    </time>
+  </p>
+  <div class="event-body">
+    <h3>{{ e.title }}</h3>
+    {% if e.presenters %}
+    <ul class="presenters">
+      {% for p in e.presenters %}<li>{{ p.name }}{% if p.note %} <span class="note">({{ p.note }})</span>{% endif %}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    {% if past and e.recap %}<p>{{ e.recap }}</p>{% elif not past and e.about %}<p>{{ e.about }}</p>{% endif %}
+    {% if not past %}
+    <p class="event-when">{{ e.date | weekday }}{% if e.time %}, {{ e.time }}{% endif %}<br>{{ e.location or (site.venue.name + ", " + site.venue.address) }}</p>
+    {% if e.rsvp %}<p><a class="button" href="{{ e.rsvp }}">Reserve a seat</a></p>{% endif %}
+    {% endif %}
+  </div>
+  {% if e.image %}
+  <figure class="event-image"><img src="/assets/img/{{ e.image }}" alt="{{ e.image_alt }}" loading="lazy"></figure>
+  {% endif %}
+</article>

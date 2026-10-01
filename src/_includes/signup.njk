@@ -1,0 +1,12 @@
+{% if site.buttondown %}
+<form class="signup" action="https://buttondown.com/api/emails/embed-subscribe/{{ site.buttondown }}" method="post">
+  <label for="signup-email-{{ signupId or 'footer' }}">Email address</label>
+  <div class="signup-row">
+    <input id="signup-email-{{ signupId or 'footer' }}" type="email" name="email" autocomplete="email" required placeholder="you@example.com">
+    <input type="hidden" name="embed" value="1">
+    <button type="submit">Join the list</button>
+  </div>
+</form>
+{% else %}
+<p class="signup-fallback"><a class="button" href="mailto:{{ site.email }}?subject=Add%20me%20to%20the%20Text%20%2B%20Pix%20list">Email us to join the list</a></p>
+{% endif %}

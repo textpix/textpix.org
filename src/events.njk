@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Events
+bodyClass: events
+summary: Upcoming Text + Pix gatherings in Durham, NC.
+---
+<header class="page-head">
+  <h1>Events</h1>
+  <p>Gatherings are free and open to anyone. Unless noted, we meet at the {{ site.venue.name }}, {{ site.venue.address }}.</p>
+</header>
+
+{% set coming = events | upcoming %}
+<section class="event-list" aria-label="Upcoming events">
+  <div data-event-list>
+    {% for e in coming %}{% include "event.njk" %}{% endfor %}
+  </div>
+  <p class="empty" data-empty {% if coming.length %}hidden{% endif %}>Nothing is scheduled right now. Join the mailing list and we'll tell you when the next date is set.</p>
+</section>
+
+<p class="more"><a href="/archive/">Past gatherings</a></p>

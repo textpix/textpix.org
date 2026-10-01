@@ -1,0 +1,28 @@
+# Publications for sale or download. The page shows an invitation to join
+# the mailing list until at least one item is listed here.
+#
+# Fields:
+#   title:      Publication title
+#   year:       2027
+#   by:         contributors
+#   details:    format, size, edition, e.g. "Risograph, 24 pp., edition of 100"
+#   about:      a sentence or two
+#   price:      "$15"   (leave blank if free)
+#   buy:        Stripe Payment Link or other checkout URL
+#   download:   for free PDFs, a file in src/assets/ or any URL
+#   image:      cover image in src/assets/img/
+#   image_alt:  a plain description of the cover
+#   sold_out:   true   (keeps the listing, hides the button)
+#
+# Example (remove the leading # marks to use it):
+#
+# - title: Text + Pix Reader No. 1
+#   year: 2027
+#   by: Members of the collective
+#   details: Risograph, 32 pp., edition of 150
+#   about: Work presented at the 2026–27 gatherings.
+#   price: "$18"
+#   buy: https://buy.stripe.com/xxxxxxxx
+#   image: reader-01.jpg
+#   image_alt: Cover of the reader, blue and pink overprinted type
+[]

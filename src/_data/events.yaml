@@ -1,0 +1,80 @@
+# Every gathering, past and future, in one list.
+# Upcoming ones appear on the Events page; once the date passes they move
+# to the Archive automatically.
+#
+# Fields (only date and title are required):
+#   date:       2026-10-26            (YYYY-MM-DD)
+#   time:       6–8 pm
+#   title:      what to call the evening
+#   presenters: list of names, each with an optional short note
+#   location:   leave out to use the default venue in site.yaml
+#   about:      a sentence or two for the listing
+#   rsvp:       link to a sign-up form (Google Form, Tally, etc.)
+#   image:      file in src/assets/img/, e.g. 2026-10-dilworth.jpg
+#   image_alt:  a plain description of that image
+#   recap:      after the event, a few sentences for the archive
+
+- date: 2026-10-26
+  time: 6–8 pm
+  title: Fall gathering
+  presenters:
+    - name: Alexa Dilworth
+  about: Alexa Dilworth shares recent work, followed by open discussion.
+  rsvp: ""
+
+- date: 2026-11-04
+  time: 12:30–2 pm
+  title: Text + Pix × Manchester
+  presenters:
+    - name: Frances Levinson
+      note: joining from Manchester
+    - name: Two presenters from Manchester, to be announced
+  location: Hybrid, with participants in Durham and Manchester. Room to be announced.
+  about: >-
+    A joint session with colleagues in Manchester, UK. Frances Levinson
+    hosts remotely with two Manchester presenters.
+  rsvp: ""
+
+- date: 2027-01-25
+  time: 6–8 pm
+  title: Spring gathering
+  about: Presenters to be announced.
+
+- date: 2027-02-22
+  time: 6–8 pm
+  title: Spring gathering
+  about: Presenters to be announced.
+
+- date: 2027-03-29
+  time: 6–8 pm
+  title: Spring gathering
+  about: Presenters to be announced.
+
+- date: 2027-04-26
+  time: 6–8 pm
+  title: Spring gathering
+  about: Presenters to be announced.
+
+# ---- Past gatherings ---------------------------------------------------
+# Add earlier semesters here as you collect them.
+
+- date: 2026-01-26
+  time: 6–8 pm
+  title: Spring gathering
+  presenters:
+    - name: Alexa Dilworth
+    - name: Mesha Maren-Hogan
+
+- date: 2026-02-23
+  time: 6–8 pm
+  title: Spring gathering
+  presenters:
+    - name: Neal Bell
+    - name: Huiyin Zhou
+
+- date: 2026-03-30
+  time: 6–8 pm
+  title: Spring gathering
+  presenters:
+    - name: Laura Williams
+    - name: Mort O'Sullivan

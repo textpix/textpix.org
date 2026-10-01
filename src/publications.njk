@@ -1,0 +1,35 @@
+---
+layout: base.njk
+title: Publications
+bodyClass: publications
+summary: Publications from the Text + Pix Collective.
+---
+<header class="page-head">
+  <h1>Publications</h1>
+  <p>Printed work made by and with members of the collective.</p>
+</header>
+
+{% if publications.length %}
+<div class="pubs">
+  {% for p in publications %}
+  <article class="pub">
+    {% if p.image %}<img src="/assets/img/{{ p.image }}" alt="{{ p.image_alt }}" loading="lazy">{% endif %}
+    <div class="pub-body">
+      <h2>{{ p.title }}{% if p.year %} <span class="pub-year">({{ p.year }})</span>{% endif %}</h2>
+      {% if p.by %}<p class="pub-by">{{ p.by }}</p>{% endif %}
+      {% if p.details %}<p class="pub-details">{{ p.details }}</p>{% endif %}
+      {% if p.about %}<p>{{ p.about }}</p>{% endif %}
+      {% if p.sold_out %}
+        <p class="pub-price">Sold out</p>
+      {% elif p.buy %}
+        <p class="pub-buy">{% if p.price %}<span class="pub-price">{{ p.price }}</span>{% endif %} <a class="button" href="{{ p.buy }}">Buy a copy</a></p>
+      {% elif p.download %}
+        <p><a class="button" href="{{ p.download }}">Download the PDF</a></p>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p class="empty">Our first publication is in the works. Join the mailing list below to hear when it's out.</p>
+{% endif %}

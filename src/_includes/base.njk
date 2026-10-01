@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% set pageTitle = (title + " | " + site.name) if title else site.name %}
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ summary or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ summary or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ site.url }}/assets/social-card.png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="page-{{ bodyClass or 'default' }}">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="{{ site.name }}, home">
+      <span class="brand-text">Text</span>{% include "mark.njk" %}<span class="brand-pix">Pix</span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        {% for item in [["Events","/events/"],["Archive","/archive/"],["Publications","/publications/"],["About","/about/"]] %}
+        <li><a href="{{ item[1] }}"{% if page.url == item[1] %} aria-current="page"{% endif %}>{{ item[0] }}</a></li>
+        {% endfor %}
+        <li><a class="nav-join" href="#join">Join the list</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <section id="join" class="join" aria-labelledby="join-heading">
+      <h2 id="join-heading">Hear about the next gathering</h2>
+      <p>One short email before each meeting, plus news of publications and field trips.</p>
+      {% include "signup.njk" %}
+    </section>
+    <div class="footer-meta">
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      {% if site.social.instagram or site.social.bluesky %}
+      <ul class="social">
+        {% if site.social.instagram %}<li><a href="{{ site.social.instagram }}">Instagram</a></li>{% endif %}
+        {% if site.social.bluesky %}<li><a href="{{ site.social.bluesky }}">Bluesky</a></li>{% endif %}
+      </ul>
+      {% endif %}
+      <p class="fine">Meeting in Durham, North Carolina, since {{ site.founded }}.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hide events whose date has passed since the site was last built.
+    (function () {
+      var today = new Date();
+      var stamp = today.getFullYear() + "-" + String(today.getMonth() + 1).padStart(2, "0") + "-" + String(today.getDate()).padStart(2, "0");
+      document.querySelectorAll("[data-event-date]").forEach(function (el) {
+        if (el.getAttribute("data-event-date") < stamp) el.remove();
+      });
+      document.querySelectorAll("[data-event-list]").forEach(function (list) {
+        if (!list.querySelector("[data-event-date]")) {
+          var empty = list.parentElement.querySelector("[data-empty]");
+          if (empty) empty.hidden = false;
+          list.hidden = true;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

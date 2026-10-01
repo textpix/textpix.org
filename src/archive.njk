@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Archive
+bodyClass: archive
+summary: Past Text + Pix gatherings and presenters, by semester.
+---
+<header class="page-head">
+  <h1>Archive</h1>
+  <p>Everyone who has presented at Text + Pix, by semester.</p>
+</header>
+
+{% set groups = events | pastBySemester %}
+{% for g in groups %}
+<section class="semester" aria-labelledby="sem-{{ loop.index }}">
+  <h2 id="sem-{{ loop.index }}">{{ g.name }}</h2>
+  {% for e in g.events %}{% set past = true %}{% include "event.njk" %}{% endfor %}
+</section>
+{% else %}
+<p class="empty">Past gatherings will be listed here.</p>
+{% endfor %}

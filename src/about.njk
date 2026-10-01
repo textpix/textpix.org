@@ -1,0 +1,22 @@
+---
+layout: base.njk
+title: About
+bodyClass: about
+summary: About the Text + Pix Collective, its gatherings and organizers.
+---
+<header class="page-head">
+  <h1>About</h1>
+</header>
+
+<div class="prose">
+  <p>The Text + Pix Collective began at Duke in {{ site.founded }} as a meeting place for people who share an interest in how written words and visual images work together. Members include professors, graduate and undergraduate students, and writers, photographers, artists, curators, editors and designers from across the Triangle.</p>
+
+  <p>The collective meets once a month during the academic year to hear short presentations of new creative projects and research in progress. Members discuss the work and propose new directions for the group. Between gatherings we organize joint projects, field trips and a summer get-together.</p>
+
+  <h2>Present your work</h2>
+  <p>We're always looking for presenters. If you have a project that puts words and images in conversation, finished or not, write to us at <a href="mailto:{{ site.email }}">{{ site.email }}</a> with a few lines about it.</p>
+
+  <h2>Organizers</h2>
+  <p>The 2026–27 gatherings are organized by {% for o in site.organizers %}{% if loop.last and not loop.first %} and {% elif not loop.first %}, {% endif %}{{ o.name }}{% endfor %}. The collective was founded by {{ site.founders }}.</p>
+  <p>Text + Pix is also listed by the <a href="https://english.duke.edu/text-pix-collective">Duke English Department</a>.</p>
+</div>

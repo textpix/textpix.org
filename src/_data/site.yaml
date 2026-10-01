@@ -1,0 +1,30 @@
+# Site-wide settings. Leave a value blank ("") to hide that item on the site.
+
+name: Text + Pix Collective
+url: https://textpix.org
+description: >-
+  A Durham collective of writers, photographers, artists, designers and
+  scholars who meet monthly to share work on the meeting of words and images.
+
+email: hello@textpix.org
+
+# Default meeting place, used when an event doesn't name its own.
+venue:
+  name: CDS Library, Center for Documentary Studies
+  address: 1317 W. Pettigrew St., Durham, NC
+
+# Buttondown username for the mailing list (the part after buttondown.com/).
+# Until this is filled in, the sign-up form links to the email address above.
+buttondown: ""
+
+social:
+  instagram: ""   # e.g. https://www.instagram.com/textpixcollective
+  bluesky: ""     # e.g. https://bsky.app/profile/textpix.org
+
+organizers:
+  - name: Mort O'Sullivan
+  - name: Dennis Szerszen
+  - name: Laura Williams
+
+founders: Lauren Neefe (MFA in Experimental and Documentary Arts) and Mesha Maren-Hogan (English)
+founded: Fall 2024

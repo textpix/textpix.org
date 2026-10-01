@@ -1,0 +1,16 @@
+{
+  "name": "textpix-site",
+  "version": "1.0.0",
+  "description": "Website for the Text + Pix Collective (textpix.org)",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "js-yaml": "^5.4.2"
+  },
+  "private": true,
+  "type": "module"
+}

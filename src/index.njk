@@ -1,0 +1,28 @@
+---
+layout: base.njk
+bodyClass: home
+summary: A Durham collective for people who work where words and images meet. Monthly gatherings, publications and a mailing list.
+---
+<section class="hero" aria-labelledby="hero-heading">
+  <h1 id="hero-heading" class="hero-mark">
+    <span class="plate plate-blue" aria-hidden="true"><span class="w-text">Text</span>{% include "mark.njk" %}<span class="w-pix">Pix</span></span>
+    <span class="plate plate-pink"><span class="w-text">Text</span>{% include "mark.njk" %}<span class="w-pix">Pix</span></span>
+  </h1>
+  <p class="lede">{{ site.description }}</p>
+</section>
+
+<section class="next" aria-labelledby="next-heading">
+  <h2 id="next-heading">Next gathering</h2>
+  {% set coming = events | upcoming %}
+  <div class="next-list" data-event-list>
+    {% for e in coming.slice(0, 3) %}{% include "event.njk" %}{% endfor %}
+  </div>
+  <p class="empty" data-empty {% if coming.length %}hidden{% endif %}>The next date isn't set yet. Join the list below and we'll tell you as soon as it is.</p>
+  <p class="more"><a href="/events/">All upcoming events</a></p>
+</section>
+
+<section class="how" aria-labelledby="how-heading">
+  <h2 id="how-heading">How it works</h2>
+  <p>We meet one evening a month during the semester. Members present short pieces of new work or research in progress, then the room talks about it. Professors, students, local writers, photographers, artists, curators, editors and designers all come. Anyone curious is welcome.</p>
+  <p>Gatherings are free. Reserving a seat helps us plan the room.</p>
+</section>
