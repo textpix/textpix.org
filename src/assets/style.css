@@ -130,12 +130,13 @@ main { padding: 0 var(--gutter) 4rem; }
 /* Events ------------------------------------------------------------- */
 .event-list, .semester { max-width: 60rem; }
 .event {
-  display: grid; grid-template-columns: 7.5rem minmax(0, 1fr);
+  display: grid; grid-template-columns: 9rem minmax(0, 1fr);
   gap: 0 2rem; padding: 1.75rem 0; border-top: 1px solid var(--rule);
 }
 .event-date { margin: 0; font-family: var(--sans); line-height: 1; }
-.event-day { display: block; font-size: 4rem; font-weight: 800; font-stretch: 125%; color: var(--deep); letter-spacing: -0.03em; }
-.event-month { display: block; margin-top: 0.4rem; font-size: 1rem; font-weight: 500; }
+.event-month { display: block; font-size: 3.25rem; font-weight: 800; font-stretch: 125%; color: var(--deep); letter-spacing: -0.02em; }
+.event-day { display: block; margin-top: 0.35rem; font-size: var(--step-1); font-weight: 600; }
+.event-year { display: block; margin-top: 0.3rem; font-size: 0.875rem; color: var(--muted); }
 .event-body { max-width: var(--measure); }
 .event-body h3 { margin-bottom: 0.3em; }
 .presenters { list-style: none; margin: 0 0 0.75rem; padding: 0; font-size: var(--step-1); line-height: 1.35; }
@@ -144,15 +145,15 @@ main { padding: 0 var(--gutter) 4rem; }
 .event-image { grid-column: 2; margin: 1rem 0 0; max-width: 28rem; }
 
 .semester h2 { font-size: var(--step-1); padding-top: 2.5rem; }
-.event-past { grid-template-columns: 7.5rem minmax(0, 1fr); padding: 1.1rem 0; }
-.event-past .event-day { font-size: 2.25rem; color: var(--ink); }
+.event-past { grid-template-columns: 9rem minmax(0, 1fr); padding: 1.1rem 0; }
+.event-past .event-month { font-size: 2rem; color: var(--ink); }
 .event-past h3 { font-size: var(--step-0); font-weight: 500; color: var(--muted); }
 .event-past .presenters { margin: 0; }
 
 @media (max-width: 34rem) {
-  .event, .event-past { grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0 1rem; }
-  .event-day { font-size: 2.75rem; }
-  .event-month { font-size: 0.875rem; }
+  .event, .event-past { grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0 0.75rem; }
+  .event-month { font-size: 1.9rem; }
+  .event-day { font-size: 1.125rem; }
   .event-image { grid-column: 1 / -1; }
 }
 
@@ -197,3 +198,11 @@ main { padding: 0 var(--gutter) 4rem; }
 }
 .signup .trap { position: absolute; left: -5000px; width: 1px; height: 1px; opacity: 0; }
 .page-head .about-lede { font-size: var(--step-1); line-height: 1.45; color: var(--ink); }
+.mark .mark-hole { fill: var(--paper); }
+.plate .mark { width: 0.68em; height: 0.68em; }
+/* Registration mark: heavier strokes in the big wordmark and at small sizes */
+.plate .mark .mark-ring { stroke-width: 9; }
+.plate .mark .mark-hair { stroke-width: 3.6; }
+.brand .mark .mark-ring { stroke-width: 11; }
+.brand .mark .mark-hair { stroke-width: 6; }
+.brand .mark { width: 1em; height: 1em; }

@@ -2,8 +2,9 @@
 <article class="event{% if past %} event-past{% endif %}"{% if not past %} data-event-date="{{ e.date | isoDate }}"{% endif %}>
   <p class="event-date">
     <time datetime="{{ e.date | isoDate }}">
+      <span class="event-month">{{ e.date | monthShort }}</span>
       <span class="event-day">{{ e.date | dayNum }}</span>
-      <span class="event-month">{{ e.date | monthName }}</span>
+      <span class="event-year">{{ e.date | year }}</span>
     </time>
   </p>
   <div class="event-body">

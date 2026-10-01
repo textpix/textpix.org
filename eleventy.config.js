@@ -25,6 +25,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("shortDate", (d) => fmt(d, { month: "short", day: "numeric" }));
   eleventyConfig.addFilter("dayNum", (d) => fmt(d, { day: "numeric" }));
   eleventyConfig.addFilter("monthName", (d) => fmt(d, { month: "long", year: "numeric" }));
+  eleventyConfig.addFilter("monthShort", (d) => fmt(d, { month: "short" }));
+  eleventyConfig.addFilter("year", (d) => fmt(d, { year: "numeric" }));
   eleventyConfig.addFilter("weekday", (d) => fmt(d, { weekday: "long" }));
   eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString().slice(0, 10));
   eleventyConfig.addFilter("semester", semesterOf);
