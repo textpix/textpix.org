@@ -2,21 +2,28 @@
 layout: base.njk
 title: About
 bodyClass: about
-summary: About the Text + Pix Collective, its gatherings and organizers.
+summary: How Text + Pix started, what happens at a gathering, and how to take part.
 ---
 <header class="page-head">
   <h1>About</h1>
+  <p class="about-lede">Text + Pix is a Durham collective of artists and makers experimenting with words and images across mediums.</p>
 </header>
 
 <div class="prose">
-  <p>The Text + Pix Collective began at Duke in {{ site.founded }} as a meeting place for people who share an interest in how written words and visual images work together. Members include professors, graduate and undergraduate students, and writers, photographers, artists, curators, editors and designers from across the Triangle.</p>
+  <p>Once a month during the academic year we meet in the library at the Center for Documentary Studies. One or two members share work in progress: a poem on its way to becoming a photograph, a novel mined from a family archive, a picture described by someone who didn't take it. Then the room talks it through. We bring our questions about textures and pixels, sound and sense. There are snacks.</p>
 
-  <p>The collective meets once a month during the academic year to hear short presentations of new creative projects and research in progress. Members discuss the work and propose new directions for the group. Between gatherings we organize joint projects, field trips and a summer get-together.</p>
+  <h2>How it started</h2>
+  <p>In the fall of 2024, two newcomers to Duke, Lauren Neefe and Frances Leviston, sat down over doughnuts with two longtime hands, Mesha Maren and Tom Rankin. Among other things, they lamented how rarely the people on Duke's East and West Campuses who care about words and images end up in the same room. So they set a date in the CDS Library and invited everyone. The first gathering was in December 2024. People came, came back, and brought friends.</p>
+
+  <h2>Who comes</h2>
+  <p>Poets, novelists, photographers, filmmakers, printmakers, designers, curators, editors and scholars, from Duke and from across the Triangle. You don't need a Duke affiliation, and you don't need to present to come. Curiosity is enough.</p>
+
+  <h2>What we make</h2>
+  <p>Talking leads to making. In Fall 2025 we published our first zine, with fiction, poetry, memoir and photographs by members. It also introduced <em>ALT text</em>, an ongoing series in which two photographers each write a close description of the other's picture, and the images and texts appear side by side. Other projects run between gatherings: joint sessions with colleagues in Manchester, field trips, and a summer get-together.</p>
 
   <h2>Present your work</h2>
-  <p>We're always looking for presenters. If you have a project that puts words and images in conversation, finished or not, write to us at <a href="mailto:{{ site.email }}">{{ site.email }}</a> with a few lines about it.</p>
+  <p>We're always looking for presenters, especially pairs whose work talks to each other. If you have a project where words and images meet, finished or not, write to us at <a href="mailto:{{ site.email }}">{{ site.email }}</a> with a few lines about it.</p>
 
   <h2>Organizers</h2>
-  <p>The 2026–27 gatherings are organized by {% for o in site.organizers %}{% if loop.last and not loop.first %} and {% elif not loop.first %}, {% endif %}{{ o.name }}{% endfor %}. The collective was founded by {{ site.founders }}.</p>
-  <p>Text + Pix is also listed by the <a href="https://english.duke.edu/text-pix-collective">Duke English Department</a>.</p>
+  <p>The 2026–27 gatherings are organized by {% for o in site.organizers %}{% if loop.last and not loop.first %} and {% elif not loop.first %}, {% endif %}{{ o.name }}{% endfor %}. Text + Pix is also listed by the <a href="https://english.duke.edu/text-pix-collective">Duke English Department</a>.</p>
 </div>
