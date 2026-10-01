@@ -83,10 +83,10 @@ organization owns the repository, and you can add other owners.
   - Deploy command: `npx wrangler deploy`
 - [x] Deploy. Live Oct 1, 2026 at https://textpix.textpixcollective.workers.dev. You'll get a temporary `textpix.<something>.workers.dev` address.
       Check it.
-- [ ] In the new project → Settings → Domains & Routes → Add → Custom domain:
+- [x] In the new project → Settings → Domains & Routes → Add → Custom domain:
       add `textpix.org`, then again for `www.textpix.org`.
 
-From now on, any change committed on GitHub is live in a minute or two.
+textpix.org went live Oct 1, 2026. From now on, any change committed on GitHub is live in a minute or two.
 
 ## 6. Mailing list: Brevo (20 min)
 
