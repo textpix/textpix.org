@@ -7,8 +7,10 @@
   --ink: #1d2433;
   --muted: #59606e;
   --rule: #d3d7dd;
-  --aqua: #2fb4d6;      /* Riso Aqua, as printed */
-  --lime: #b9c23a;      /* Riso Light Lime, as printed */
+  /* Riso inks from measured L*a*b* (D65), converted to sRGB:
+     Aqua L73 a-31 b-25; Light Lime L87 a-11 b70. */
+  --aqua: #02c5e0;
+  --lime: #ecdd4b;
   --deep: #006070;      /* dark aqua for text, links, buttons */
   --link: var(--deep);
   --field: #ffffff;
@@ -33,8 +35,8 @@
     --ink: #e7e9ef;
     --muted: #a3a9b6;
     --rule: #333847;
-    --aqua: #49c6e3;
-    --lime: #d4dc4c;
+    --aqua: #02c5e0;
+    --lime: #ecdd4b;
     --deep: #7fd3e6;
     --link: #7fd3e6;
     --field: #1d212c;
@@ -42,7 +44,7 @@
 }
 :root[data-theme="dark"] {
   --paper: #151821; --ink: #e7e9ef; --muted: #a3a9b6; --rule: #333847;
-  --aqua: #49c6e3; --lime: #d4dc4c; --deep: #7fd3e6; --link: #7fd3e6; --field: #1d212c;
+  --aqua: #02c5e0; --lime: #ecdd4b; --deep: #7fd3e6; --link: #7fd3e6; --field: #1d212c;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
