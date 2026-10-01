@@ -42,8 +42,8 @@ place.
 
 ## 3. Email: hello@textpix.org (10 min)
 
-- [ ] In Cloudflare, open textpix.org → Email → Email Routing → enable.
-- [ ] Add the rule `hello@textpix.org` → forwards to the shared Gmail. Optionally
+- [x] In Cloudflare, open textpix.org → Email → Email Routing → enable.
+- [x] Add the rule `hello@textpix.org` → forwards to the shared Gmail (active Oct 1, 2026). Optionally
       forward it to each organizer as well.
 - [ ] Send a test message to hello@textpix.org.
 
