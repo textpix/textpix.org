@@ -13,8 +13,10 @@ one set of keys instead of untangling personal accounts.
 
 ## 1. Shared identity (15 min)
 
-- [ ] Create a Google account for the collective, e.g. `textpixcollective@gmail.com`.
-      Every service below is signed up with this address.
+- [x] Create a Google account for the collective: **textpixcollective@gmail.com**
+      (done Oct 1, 2026). Every service below is signed up with this address.
+- [ ] Add a second recovery method (another organizer's email) so the account
+      doesn't depend on one person's phone.
 - [ ] Store its password in a shared password manager vault (1Password or
       Bitwarden both offer shared vaults). Add Dennis and Laura.
 - [ ] Turn on two-step verification. Use an authenticator app or passkey kept
