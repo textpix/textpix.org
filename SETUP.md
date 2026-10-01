@@ -75,13 +75,13 @@ organization owns the repository, and you can add other owners.
 
 ## 5. Hosting: connect GitHub to Cloudflare (15 min)
 
-- [ ] Cloudflare → Workers & Pages → Create → Import a repository.
-- [ ] Connect GitHub. When asked where to install the Cloudflare app, pick the
+- [x] Cloudflare → Workers & Pages → Create → Import a repository.
+- [x] Connect GitHub. When asked where to install the Cloudflare app, pick the
       **textpix organization only**, not your personal repositories.
-- [ ] Choose the `textpix.org` repository and set:
+- [x] Choose the `textpix.org` repository and set:
   - Build command: `npm run build`
   - Deploy command: `npx wrangler deploy`
-- [ ] Deploy. You'll get a temporary `textpix.<something>.workers.dev` address.
+- [x] Deploy. Live Oct 1, 2026 at https://textpix.textpixcollective.workers.dev. You'll get a temporary `textpix.<something>.workers.dev` address.
       Check it.
 - [ ] In the new project → Settings → Domains & Routes → Add → Custom domain:
       add `textpix.org`, then again for `www.textpix.org`.
