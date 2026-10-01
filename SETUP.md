@@ -46,7 +46,7 @@ place.
 - [x] Add the rule `hello@textpix.org` → forwards to the shared Gmail (active Oct 1, 2026). Optionally
       forward it to each organizer as well.
 - [x] Send a test message to hello@textpix.org (works; first tests landed in Spam).
-- [ ] In the shared Gmail, add a filter: To `hello@textpix.org` → Never send it
+- [x] In the shared Gmail, add a filter: To `hello@textpix.org` → Never send it
       to Spam, label "textpix.org".
 
 Replies go out from the shared Gmail for now. Sending *as*
