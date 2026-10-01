@@ -29,11 +29,11 @@ Cloudflare sells domains at cost (about $8.50 the first year for .org and
 about $11 a year to renew) and also hosts the site, so everything lives in one
 place.
 
-- [ ] Sign up at dash.cloudflare.com with the shared Gmail.
-- [ ] Domain Registration → Register Domains → `textpix.org`.
+- [x] Sign up at dash.cloudflare.com with the shared Gmail.
+- [x] Domain Registration → Register Domains → `textpix.org` (done Oct 1, 2026).
 - [ ] Registrant name: "Text + Pix Collective" as the organization, with one
       organizer as the contact (Cloudflare keeps this private).
-- [ ] Turn on auto-renew. Note whose card pays and the renewal month in the
+- [x] Turn on auto-renew. Note whose card pays and the renewal month in the
       shared vault.
 - [ ] Manage Account → Members: invite Dennis and Laura (as Administrator) so
       access never depends on one person.
