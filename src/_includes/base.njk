@@ -64,6 +64,9 @@
       document.querySelectorAll("[data-event-date]").forEach(function (el) {
         if (el.getAttribute("data-event-date") < stamp) el.remove();
       });
+      document.querySelectorAll("[data-semester]").forEach(function (sec) {
+        if (!sec.querySelector("[data-event-date]")) sec.remove();
+      });
       document.querySelectorAll("[data-event-list]").forEach(function (list) {
         if (!list.querySelector("[data-event-date]")) {
           var empty = list.parentElement.querySelector("[data-empty]");

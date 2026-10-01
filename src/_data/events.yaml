@@ -2,10 +2,11 @@
 # Upcoming ones appear on the Events page; once the date passes they move
 # to the Archive automatically.
 #
-# Fields (only date and title are required):
+# Fields (only date is required):
 #   date:       2026-10-26            (YYYY-MM-DD)
 #   time:       6–8 pm
-#   title:      what to call the evening
+#   title:      only for a special session (e.g. Text + Pix × Manchester);
+#               ordinary gatherings need no title
 #   presenters: list of names, each with an optional short note
 #   location:   leave out to use the default venue in site.yaml
 #   about:      a sentence or two for the listing
@@ -17,7 +18,6 @@
 
 - date: 2026-10-26
   time: 6–8 pm
-  title: Fall gathering
   presenters:
     - name: Alexa Dilworth
   about: Alexa Dilworth shares recent work, followed by open discussion.
@@ -50,44 +50,52 @@
 
 - date: 2027-01-25
   time: 6–8 pm
-  title: Spring gathering
   about: Presenters to be announced.
 
 - date: 2027-02-22
   time: 6–8 pm
-  title: Spring gathering
   about: Presenters to be announced.
 
 - date: 2027-03-29
   time: 6–8 pm
-  title: Spring gathering
   about: Presenters to be announced.
 
 - date: 2027-04-26
   time: 6–8 pm
-  title: Spring gathering
   about: Presenters to be announced.
 
 # ---- Past gatherings ---------------------------------------------------
 # Add earlier semesters here as you collect them.
 
+- date: 2024-12-04
+  presenters:
+    - name: Mesha Maren
+    - name: Frances Leviston
+
+- date: 2025-02-05
+  presenters:
+    - name: Stan Abe
+    - name: Pete Crispell
+
+- date: 2025-04-16
+  presenters:
+    - name: Tom Rankin
+    - name: Ama Kyereme
+
 - date: 2026-01-26
   time: 6–8 pm
-  title: Spring gathering
   presenters:
     - name: Alexa Dilworth
     - name: Mesha Maren-Hogan
 
 - date: 2026-02-23
   time: 6–8 pm
-  title: Spring gathering
   presenters:
     - name: Neal Bell
     - name: Huiyin Zhou
 
 - date: 2026-03-30
   time: 6–8 pm
-  title: Spring gathering
   presenters:
     - name: Laura Williams
     - name: Mort O'Sullivan

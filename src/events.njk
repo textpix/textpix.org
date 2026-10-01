@@ -12,7 +12,12 @@ summary: Upcoming Text + Pix gatherings in Durham, NC.
 {% set coming = events | upcoming %}
 <section class="event-list" aria-label="Upcoming events">
   <div data-event-list>
-    {% for e in coming %}{% include "event.njk" %}{% endfor %}
+    {% for g in events | upcomingBySemester %}
+    <section class="semester" aria-labelledby="up-{{ loop.index }}" data-semester>
+      <h2 id="up-{{ loop.index }}">{{ g.name }}</h2>
+      {% for e in g.events %}{% include "event.njk" %}{% endfor %}
+    </section>
+    {% endfor %}
   </div>
   <p class="empty" data-empty {% if coming.length %}hidden{% endif %}>Nothing is scheduled right now. Join the mailing list and we'll tell you when the next date is set.</p>
 </section>

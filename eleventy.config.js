@@ -40,6 +40,22 @@ export default function (eleventyConfig) {
       .sort((a, b) => new Date(a.date) - new Date(b.date));
   });
 
+  // Upcoming events grouped by semester, soonest first.
+  eleventyConfig.addFilter("upcomingBySemester", (events = []) => {
+    const today = new Date().toISOString().slice(0, 10);
+    const groups = [];
+    events
+      .filter((e) => new Date(e.date).toISOString().slice(0, 10) >= today)
+      .sort((a, b) => new Date(a.date) - new Date(b.date))
+      .forEach((e) => {
+        const name = semesterOf(e.date);
+        let g = groups.find((x) => x.name === name);
+        if (!g) groups.push((g = { name, events: [] }));
+        g.events.push(e);
+      });
+    return groups;
+  });
+
   // Past events grouped by semester, newest first.
   eleventyConfig.addFilter("pastBySemester", (events = []) => {
     const today = new Date().toISOString().slice(0, 10);

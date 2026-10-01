@@ -8,7 +8,7 @@
     </time>
   </p>
   <div class="event-body">
-    <h3>{{ e.title }}</h3>
+    {% if e.title %}<h3>{{ e.title }}</h3>{% endif %}
     {% if e.presenters %}
     <ul class="presenters">
       {% for p in e.presenters %}<li>{{ p.name }}{% if p.note %} <span class="note">({{ p.note }})</span>{% endif %}</li>{% endfor %}
