@@ -9,7 +9,8 @@
 #   presenters: list of names, each with an optional short note
 #   location:   leave out to use the default venue in site.yaml
 #   about:      a sentence or two for the listing
-#   rsvp:       link to a sign-up form (Google Form, Tally, etc.)
+#   rsvp:       link to a sign-up form (Google Form, Brevo, etc.)
+#   rsvp_label: button text, if not "Reserve a seat"
 #   image:      file in src/assets/img/, e.g. 2026-10-dilworth.jpg
 #   image_alt:  a plain description of that image
 #   recap:      after the event, a few sentences for the archive
@@ -23,17 +24,22 @@
   rsvp: ""
 
 - date: 2026-11-04
-  time: 12:30–2 pm
+  time: 12:30–2 pm Eastern (5:30–7 pm UK)
   title: Text + Pix × Manchester
   presenters:
-    - name: Frances Leviston
-      note: joining from Manchester
-    - name: Two presenters from Manchester, to be announced
-  location: Hybrid, with participants in Durham and Manchester. Room to be announced.
+    - name: Kelechi Anucha
+      note: on X-ray imaging and the work of Claudia Rankine
+    - name: Sian MacFarlane
+      note: multimedia work on the landscapes of neglected writers
+  location: >-
+    On Zoom, and in person in the CDS Conference Room (Room L203),
+    1317 W. Pettigrew St., Durham, NC
   about: >-
-    A joint session with colleagues in Manchester, UK. Frances Leviston
-    hosts remotely with two Manchester presenters.
-  rsvp: ""
+    A joint session with colleagues in Manchester, UK, hosted by Frances
+    Leviston. Kelechi Anucha is a researcher in Frances's department; Sian
+    MacFarlane is a film and photography lecturer at a neighbouring university.
+  rsvp: "mailto:hello@textpix.org?subject=Register%3A%20Text%20%2B%20Pix%20%C3%97%20Manchester%2C%20Nov%204&body=Please%20send%20me%20the%20Zoom%20link.%0A%0AName%3A%0AAffiliation%20(optional)%3A%0AJoining%20on%20Zoom%20or%20in%20person%3A"
+  rsvp_label: Register for the Zoom link
 
 - date: 2027-01-25
   time: 6–8 pm

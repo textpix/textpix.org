@@ -17,7 +17,7 @@
     {% if past and e.recap %}<p>{{ e.recap }}</p>{% elif not past and e.about %}<p>{{ e.about }}</p>{% endif %}
     {% if not past %}
     <p class="event-when">{{ e.date | weekday }}{% if e.time %}, {{ e.time }}{% endif %}<br>{{ e.location or (site.venue.name + ", " + site.venue.address) }}</p>
-    {% if e.rsvp %}<p><a class="button" href="{{ e.rsvp }}">Reserve a seat</a></p>{% endif %}
+    {% if e.rsvp %}<p><a class="button" href="{{ e.rsvp }}">{{ e.rsvp_label or "Reserve a seat" }}</a></p>{% endif %}
     {% endif %}
   </div>
   {% if e.image %}
