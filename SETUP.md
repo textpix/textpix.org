@@ -54,16 +54,19 @@ hello@textpix.org can be added later if it matters.
 
 ## 4. GitHub: the code's home (20 min)
 
+Done Oct 1, 2026: organization `textpix`, repository https://github.com/textpix/textpix.org,
+Claude GitHub App installed on the organization.
+
 GitHub organizations must be created by a personal account, but the
 organization owns the repository, and you can add other owners.
 
-- [ ] Signed in to your own GitHub account, create a free organization
+- [x] Signed in to your own GitHub account, create a free organization
       named `textpix` (or `textpix-collective` if that's taken). Set its
       contact email to the shared Gmail.
 - [ ] Invite Dennis and/or Laura as owners, if they have GitHub accounts.
-- [ ] Create a repository named `textpix.org` (public is fine; nothing secret
+- [x] Create a repository named `textpix.org` (public is fine; nothing secret
       lives in it).
-- [ ] Upload the site files. Easiest: on the empty repository's page, click
+- [x] Upload the site files. Easiest: on the empty repository's page, click
       "uploading an existing file", drag in everything from the
       `textpix-site` folder, and commit. Or, from a terminal in that folder:
 
