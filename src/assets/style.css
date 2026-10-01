@@ -1,13 +1,16 @@
-/* Text + Pix — two Riso inks on paper.
+/* Text + Pix — the zine's Riso inks (Aqua and Light Lime) on paper.
+   Aqua and lime are display inks only: too light for small text.
+   Text accents, links and buttons use --deep, a dark aqua.
    Change the colors here and the whole site follows. */
 :root {
   --paper: #f7f8f6;
   --ink: #1d2433;
   --muted: #59606e;
   --rule: #d3d7dd;
-  --blue: #3255a4;      /* Riso Federal Blue */
-  --pink: #ff48b0;      /* Riso Fluorescent Pink */
-  --link: #3255a4;
+  --aqua: #2fb4d6;      /* Riso Aqua, as printed */
+  --lime: #b9c23a;      /* Riso Light Lime, as printed */
+  --deep: #006070;      /* dark aqua for text, links, buttons */
+  --link: var(--deep);
   --field: #ffffff;
 
   --serif: "Source Serif 4", Georgia, serif;
@@ -30,15 +33,16 @@
     --ink: #e7e9ef;
     --muted: #a3a9b6;
     --rule: #333847;
-    --blue: #7f9be0;
-    --pink: #ff6fc2;
-    --link: #a9bdf0;
+    --aqua: #49c6e3;
+    --lime: #d4dc4c;
+    --deep: #7fd3e6;
+    --link: #7fd3e6;
     --field: #1d212c;
   }
 }
 :root[data-theme="dark"] {
   --paper: #151821; --ink: #e7e9ef; --muted: #a3a9b6; --rule: #333847;
-  --blue: #7f9be0; --pink: #ff6fc2; --link: #a9bdf0; --field: #1d212c;
+  --aqua: #49c6e3; --lime: #d4dc4c; --deep: #7fd3e6; --link: #7fd3e6; --field: #1d212c;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -53,7 +57,7 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
 a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--deep); outline-offset: 3px; }
 
 .skip { position: absolute; left: -999px; }
 .skip:focus { left: var(--gutter); top: 0.5rem; background: var(--paper); padding: 0.5rem; z-index: 10; }
@@ -78,14 +82,14 @@ p { margin: 0 0 1em; }
   color: var(--ink); text-decoration: none;
 }
 .brand .brand-text { font-family: var(--serif); font-weight: 600; font-stretch: normal; }
-.brand .mark { width: 0.85em; height: 0.85em; color: var(--pink); }
+.brand .mark { width: 0.85em; height: 0.85em; color: var(--aqua); }
 .site-header ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin: 0; padding: 0; list-style: none; }
 .site-header nav a {
   font: 500 1rem/1.4 var(--sans); color: var(--ink); text-decoration: none;
   padding: 0.25rem 0; border-bottom: 2px solid transparent;
 }
-.site-header nav a:hover, .site-header nav a[aria-current="page"] { border-bottom-color: var(--blue); }
-.site-header nav .nav-join { color: var(--blue); }
+.site-header nav a:hover, .site-header nav a[aria-current="page"] { border-bottom-color: var(--aqua); }
+.site-header nav .nav-join { color: var(--deep); }
 
 main { padding: 0 var(--gutter) 4rem; }
 
@@ -99,13 +103,13 @@ main { padding: 0 var(--gutter) 4rem; }
 .plate .w-text { font-family: var(--serif); font-weight: 600; letter-spacing: -0.02em; }
 .plate .w-pix { font-family: var(--sans); font-weight: 800; font-stretch: 125%; letter-spacing: -0.02em; }
 .plate .mark { width: 0.55em; height: 0.55em; flex: none; margin: 0 0.04em; }
-.plate-blue { color: var(--blue); }
-.plate-pink { color: var(--pink); mix-blend-mode: multiply; transform: translate(0.035em, 0.025em); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .plate-pink { mix-blend-mode: screen; } }
-:root[data-theme="dark"] .plate-pink { mix-blend-mode: screen; }
+.plate-a { color: var(--aqua); }
+.plate-b { color: var(--lime); mix-blend-mode: multiply; transform: translate(0.035em, 0.025em); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .plate-b { mix-blend-mode: screen; } }
+:root[data-theme="dark"] .plate-b { mix-blend-mode: screen; }
 
 @media (prefers-reduced-motion: no-preference) {
-  .plate-pink { animation: register 1.4s cubic-bezier(.2,.7,.2,1) 0.2s both; }
+  .plate-b { animation: register 1.4s cubic-bezier(.2,.7,.2,1) 0.2s both; }
   @keyframes register { from { transform: translate(0.12em, -0.06em); opacity: 0; } to { transform: translate(0.035em, 0.025em); opacity: 1; } }
 }
 .lede { font-size: var(--step-1); line-height: 1.45; max-width: 32rem; }
@@ -130,7 +134,7 @@ main { padding: 0 var(--gutter) 4rem; }
   gap: 0 2rem; padding: 1.75rem 0; border-top: 1px solid var(--rule);
 }
 .event-date { margin: 0; font-family: var(--sans); line-height: 1; }
-.event-day { display: block; font-size: 4rem; font-weight: 800; font-stretch: 125%; color: var(--blue); letter-spacing: -0.03em; }
+.event-day { display: block; font-size: 4rem; font-weight: 800; font-stretch: 125%; color: var(--deep); letter-spacing: -0.03em; }
 .event-month { display: block; margin-top: 0.4rem; font-size: 1rem; font-weight: 500; }
 .event-body { max-width: var(--measure); }
 .event-body h3 { margin-bottom: 0.3em; }
@@ -155,8 +159,8 @@ main { padding: 0 var(--gutter) 4rem; }
 /* Buttons and forms --------------------------------------------------- */
 .button, .signup button {
   display: inline-block; font: 600 1rem/1 var(--sans);
-  padding: 0.8rem 1.2rem; border: 2px solid var(--blue); border-radius: 2px;
-  background: var(--blue); color: var(--paper); text-decoration: none; cursor: pointer;
+  padding: 0.8rem 1.2rem; border: 2px solid var(--deep); border-radius: 2px;
+  background: var(--deep); color: var(--paper); text-decoration: none; cursor: pointer;
 }
 .button:hover, .signup button:hover { background: var(--ink); border-color: var(--ink); }
 
@@ -172,7 +176,7 @@ main { padding: 0 var(--gutter) 4rem; }
 /* Footer -------------------------------------------------------------- */
 .site-footer {
   display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 2rem 4rem;
-  padding: 3rem var(--gutter); border-top: 3px solid var(--blue);
+  padding: 3rem var(--gutter); border-top: 4px solid var(--aqua);
 }
 .join h2 { font-size: var(--step-2); }
 .join > p { max-width: 30rem; }
