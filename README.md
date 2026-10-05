@@ -28,6 +28,9 @@ archive entry has some life to it.
 meeting, copy its shareable link, and paste it as `rsvp:` on the event. A
 "Reserve a seat" button appears.
 
+**Short links** (e.g. textpix.org/nov4 for flyers and QR codes): add a line
+to `src/_redirects` — the short path, the destination, and `302`.
+
 **Mailing list:** the sign-up form in every page footer sends addresses to
 Brevo. Its settings are under `brevo:` in `src/_data/site.yaml`; SETUP.md
 step 6 explains where to find them.

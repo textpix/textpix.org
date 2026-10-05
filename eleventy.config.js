@@ -18,6 +18,7 @@ const semesterOf = (d) => {
 export default function (eleventyConfig) {
   eleventyConfig.addDataExtension("yaml,yml", (contents) => loadYaml(contents));
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
   eleventyConfig.addFilter("longDate", (d) =>
     fmt(d, { weekday: "long", month: "long", day: "numeric", year: "numeric" })

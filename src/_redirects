@@ -1,0 +1,5 @@
+# Short links. Format: /path  destination  302
+# 302 = temporary, so a link can be repointed later (e.g. after the event).
+
+/nov4         https://docs.google.com/forms/d/e/1FAIpQLSftKN9OIBYrIjE5Gi6q_1j9OkEEA4bK7bo6HMsbwJ1XQB69YQ/viewform  302
+/manchester   https://docs.google.com/forms/d/e/1FAIpQLSftKN9OIBYrIjE5Gi6q_1j9OkEEA4bK7bo6HMsbwJ1XQB69YQ/viewform  302
