@@ -10,7 +10,7 @@ email: hello@textpix.org
 
 # Default meeting place, used when an event doesn't name its own.
 venue:
-  name: CDS Library, Center for Documentary Studies
+  name: CDS Library (Room B113), Center for Documentary Studies
   address: 1317 W. Pettigrew St., Durham, NC
 
 # Mailing list (Brevo). Fill in whichever you have; leave the rest blank.
