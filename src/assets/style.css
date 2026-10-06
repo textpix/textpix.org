@@ -1,12 +1,16 @@
-/* Text + Pix — the zine's Riso inks (Aqua and Light Lime) on paper.
+/* Text + Pix — the zine's Riso inks (Aqua and Light Lime) on paper,
+   with cream paper, brick red and the color bar from Laura Williams's
+   Fall 2026 flyer.
    Aqua and lime are display inks only: too light for small text.
    Text accents, links and buttons use --deep, a dark aqua.
    Change the colors here and the whole site follows. */
 :root {
-  --paper: #f7f8f6;
+  --paper: #faf6e9;     /* flyer cream */
   --ink: #1d2433;
   --muted: #59606e;
-  --rule: #d3d7dd;
+  --rule: #ddd5c2;
+  --red: #cc3420;       /* flyer brick red */
+  --cutout-band: #242021;
   /* Riso inks from measured L*a*b* (D65), converted to sRGB:
      Aqua L73 a-31 b-25; Light Lime L87 a-11 b70. */
   --aqua: #02c5e0;
@@ -35,6 +39,8 @@
     --ink: #e7e9ef;
     --muted: #a3a9b6;
     --rule: #333847;
+    --red: #ff8a70;
+    --cutout-band: #0c0d12;
     --aqua: #02c5e0;
     --lime: #ecdd4b;
     --deep: #7fd3e6;
@@ -43,7 +49,7 @@
   }
 }
 :root[data-theme="dark"] {
-  --paper: #151821; --ink: #e7e9ef; --muted: #a3a9b6; --rule: #333847;
+  --paper: #151821; --ink: #e7e9ef; --muted: #a3a9b6; --rule: #333847; --red: #ff8a70; --cutout-band: #0c0d12;
   --aqua: #02c5e0; --lime: #ecdd4b; --deep: #7fd3e6; --link: #7fd3e6; --field: #1d212c;
 }
 
@@ -136,7 +142,7 @@ main { padding: 0 var(--gutter) 4rem; }
   gap: 0 2rem; padding: 1.75rem 0; border-top: 1px solid var(--rule);
 }
 .event-date { margin: 0; font-family: var(--sans); line-height: 1; }
-.event-month { display: block; font-size: 3.25rem; font-weight: 800; font-stretch: 125%; color: var(--deep); letter-spacing: -0.02em; }
+.event-month { display: block; font-size: 3.25rem; font-weight: 800; font-stretch: 125%; color: var(--red); letter-spacing: -0.02em; }
 .event-day { display: block; margin-top: 0.35rem; font-size: var(--step-1); font-weight: 600; }
 .event-year { display: block; margin-top: 0.3rem; font-size: 0.875rem; color: var(--muted); }
 .event-body { max-width: var(--measure); }
@@ -179,7 +185,7 @@ main { padding: 0 var(--gutter) 4rem; }
 /* Footer -------------------------------------------------------------- */
 .site-footer {
   display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 2rem 4rem;
-  padding: 3rem var(--gutter); border-top: 4px solid var(--aqua);
+  padding: 3rem var(--gutter);
 }
 .join h2 { font-size: var(--step-2); }
 .join > p { max-width: 30rem; }
@@ -208,3 +214,41 @@ main { padding: 0 var(--gutter) 4rem; }
 .brand .mark .mark-ring { stroke-width: 11; }
 .brand .mark .mark-hair { stroke-width: 6; }
 .brand .mark { width: 1em; height: 1em; }
+
+/* Flyer color bar ---------------------------------------------------- */
+.ink-bar { height: 0.75rem; background: linear-gradient(90deg, #da66ba 0.0% 8.3%, #cd3722 8.3% 10.9%, #f9b018 10.9% 15.0%, #79c4dd 15.0% 21.4%, #231f20 21.4% 33.7%, #cd3722 33.7% 41.1%, #da66ba 41.1% 43.5%, #88c626 43.5% 47.6%, #231f20 47.6% 52.1%, #da66ba 52.1% 60.6%, #cd3722 60.6% 64.7%, #79c4dd 64.7% 72.0%, #f9b018 72.0% 76.3%, #da66ba 76.3% 86.0%, #cd3722 86.0% 93.4%, #da66ba 93.4% 95.8%, #88c626 95.8% 100.0%); }
+@media (min-width: 48rem) { .ink-bar { height: 1rem; } }
+
+.site-footer-wrap > .ink-bar { height: 0.6rem; }
+.footer-credit { font-family: var(--sans); font-size: var(--step--1); color: var(--muted); margin-top: -0.4rem; }
+.footer-name { font-family: var(--sans); font-weight: 700; margin-bottom: 0.2rem; }
+
+/* About: cut-out letters, after the flyer -------------------------- */
+.about-grid { display: grid; grid-template-columns: minmax(0, var(--measure)) max-content; justify-content: start; gap: 0 clamp(2.5rem, 9vw, 8rem); align-items: start; }
+.about-grid .page-head, .about-grid .prose { grid-column: 1; }
+.cutout {
+  grid-column: 2; grid-row: 1 / span 2;
+  justify-self: start; width: max-content;
+  margin: clamp(2rem, 6vw, 4rem) 0 0; padding: 1.4rem 1rem 1.6rem;
+  background: var(--cutout-band);
+  display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
+}
+.cutout .word { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+.cutout .word + .word { margin-top: 1.1rem; }
+.cutout .tile {
+  display: grid; place-items: center; width: 2.2rem; height: 2.8rem;
+  font: 600 2.1rem/1 var(--sans); font-stretch: 62%; color: #fff;
+  background: var(--tone); transform: rotate(var(--tilt));
+  clip-path: var(--shape);
+}
+@media (max-width: 48rem) {
+  .about-grid { grid-template-columns: minmax(0, 1fr); }
+  .cutout {
+    grid-column: 1; grid-row: 2; position: static; margin: 0 0 2rem; width: auto; justify-self: stretch;
+    flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0.6rem 1.2rem; padding: 0.9rem;
+  }
+  .cutout .word { flex-direction: row; gap: 0.2rem; }
+  .cutout .word + .word { margin-top: 0; }
+  .cutout .tile { width: 1.55rem; height: 1.9rem; font-size: 1.45rem; }
+  .about-grid .prose { grid-row: 3; }
+}

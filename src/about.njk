@@ -4,6 +4,24 @@ title: About
 bodyClass: about
 summary: How Text + Pix started, what happens at a gathering, and how to take part.
 ---
+<div class="about-grid">
+{% set tones = ["#8f8b88", "#5e5a59", "#a9a5a1", "#46423f", "#7a7673", "#36322f"] %}
+{% set tilts = ["-3deg", "2deg", "-1deg", "4deg", "-4deg", "1deg", "3deg", "-2deg"] %}
+{% set shapes = [
+  "polygon(4% 0, 100% 3%, 95% 100%, 0 96%)",
+  "polygon(0 4%, 97% 0, 100% 94%, 6% 100%)",
+  "polygon(7% 2%, 100% 0, 92% 97%, 0 100%)",
+  "polygon(0 0, 94% 5%, 100% 100%, 3% 92%)",
+  "polygon(2% 6%, 98% 0, 96% 95%, 0 100%)",
+  "polygon(5% 0, 100% 8%, 100% 92%, 0 100%)"
+] %}
+<aside class="cutout" aria-hidden="true">
+  {% for word in ["TEXT+PIX", "COLLECTIVE"] %}{% set w = loop.index0 %}
+  <span class="word">
+    {% for ch in word | list %}{% set n = ch.charCodeAt(0) + loop.index * 7 + w * 11 %}<span class="tile" style="--tone: {{ tones[n % 6] }}; --tilt: {{ tilts[n % 8] }}; --shape: {{ shapes[(n * 5) % 6] }}">{{ ch }}</span>{% endfor %}
+  </span>
+  {% endfor %}
+</aside>
 <header class="page-head">
   <h1>About</h1>
   <p class="about-lede">Text + Pix is a Durham collective of artists and makers experimenting with words and images across mediums.</p>
@@ -28,4 +46,5 @@ summary: How Text + Pix started, what happens at a gathering, and how to take pa
 
   <h2>Organizers</h2>
   <p>The 2026–27 gatherings are organized by {% for o in site.organizers %}{% if loop.last and not loop.first %} and {% elif not loop.first %}, {% endif %}{{ o.name }}{% endfor %}. Text + Pix is also listed by the <a href="https://english.duke.edu/text-pix-collective">Duke English Department</a>.</p>
+</div>
 </div>

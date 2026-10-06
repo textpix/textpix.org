@@ -8,6 +8,9 @@ description: >-
 
 email: hello@textpix.org
 
+# Shown under the name in every page footer (from the Fall 2026 flyer).
+credit: an English + MFA|EDA gathering at Duke
+
 # Default meeting place, used when an event doesn't name its own.
 venue:
   name: CDS Library (Room B113), Center for Documentary Studies

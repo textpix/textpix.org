@@ -20,6 +20,7 @@
 </head>
 <body class="page-{{ bodyClass or 'default' }}">
   <a class="skip" href="#main">Skip to content</a>
+  <div class="ink-bar" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="/" aria-label="{{ site.name }}, home">
       <span class="brand-text">Text</span>{% include "mark.njk" %}<span class="brand-pix">Pix</span>
@@ -38,6 +39,8 @@
     {{ content | safe }}
   </main>
 
+  <div class="site-footer-wrap">
+  <div class="ink-bar" aria-hidden="true"></div>
   <footer class="site-footer">
     <section id="join" class="join" aria-labelledby="join-heading">
       <h2 id="join-heading">Hear about the next gathering</h2>
@@ -45,6 +48,8 @@
       {% include "signup.njk" %}
     </section>
     <div class="footer-meta">
+      <p class="footer-name">text+pix collective</p>
+      <p class="footer-credit">{{ site.credit }}</p>
       <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       {% if site.social.instagram or site.social.bluesky %}
       <ul class="social">
@@ -55,6 +60,7 @@
       <p class="fine">Meeting in Durham, North Carolina, since {{ site.founded }}.</p>
     </div>
   </footer>
+  </div>
 
   <script>
     // Hide events whose date has passed since the site was last built.
