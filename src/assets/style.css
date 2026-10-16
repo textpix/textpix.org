@@ -85,12 +85,10 @@ p { margin: 0 0 1em; }
   border-bottom: 1px solid var(--rule);
 }
 .brand {
-  display: inline-flex; align-items: center; gap: 0.2em;
-  font: 700 1.5rem/1 var(--sans); font-stretch: 112%;
+  display: inline-block;
+  font: 600 1.5rem/1 var(--serif); letter-spacing: -0.01em;
   color: var(--ink); text-decoration: none;
 }
-.brand .brand-text { font-family: var(--serif); font-weight: 600; font-stretch: normal; }
-.brand .mark { width: 0.85em; height: 0.85em; color: var(--aqua); }
 .site-header ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin: 0; padding: 0; list-style: none; }
 .site-header nav a {
   font: 500 1rem/1.4 var(--sans); color: var(--ink); text-decoration: none;
@@ -107,10 +105,7 @@ main { padding: 0 var(--gutter) 4rem; }
   position: relative; display: grid; margin: 0 0 2rem;
   font-size: clamp(4.5rem, 17vw, 13rem); line-height: 0.9; font-stretch: 100%;
 }
-.plate { grid-area: 1 / 1; display: flex; align-items: center; gap: 0.06em; white-space: nowrap; }
-.plate .w-text { font-family: var(--serif); font-weight: 600; letter-spacing: -0.02em; }
-.plate .w-pix { font-family: var(--sans); font-weight: 800; font-stretch: 125%; letter-spacing: -0.02em; }
-.plate .mark { width: 0.55em; height: 0.55em; flex: none; margin: 0 0.04em; }
+.plate { grid-area: 1 / 1; white-space: nowrap; font-family: var(--serif); font-weight: 600; letter-spacing: -0.02em; }
 .plate-a { color: var(--aqua); }
 .plate-b { color: var(--lime); mix-blend-mode: multiply; transform: translate(0.035em, 0.025em); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .plate-b { mix-blend-mode: screen; } }
@@ -207,13 +202,7 @@ main { padding: 0 var(--gutter) 4rem; }
 .signup .trap { position: absolute; left: -5000px; width: 1px; height: 1px; opacity: 0; }
 .page-head .about-lede { font-size: var(--step-1); line-height: 1.45; color: var(--ink); }
 .mark .mark-hole { fill: var(--paper); }
-.plate .mark { width: 0.68em; height: 0.68em; }
 /* Registration mark: heavier strokes in the big wordmark and at small sizes */
-.plate .mark .mark-ring { stroke-width: 9; }
-.plate .mark .mark-hair { stroke-width: 3.6; }
-.brand .mark .mark-ring { stroke-width: 11; }
-.brand .mark .mark-hair { stroke-width: 6; }
-.brand .mark { width: 1em; height: 1em; }
 
 /* Flyer color bar ---------------------------------------------------- */
 .ink-bar { height: 0.75rem; background: linear-gradient(90deg, #da66ba 0.0% 8.3%, #cd3722 8.3% 10.9%, #f9b018 10.9% 15.0%, #79c4dd 15.0% 21.4%, #231f20 21.4% 33.7%, #cd3722 33.7% 41.1%, #da66ba 41.1% 43.5%, #88c626 43.5% 47.6%, #231f20 47.6% 52.1%, #da66ba 52.1% 60.6%, #cd3722 60.6% 64.7%, #79c4dd 64.7% 72.0%, #f9b018 72.0% 76.3%, #da66ba 76.3% 86.0%, #cd3722 86.0% 93.4%, #da66ba 93.4% 95.8%, #88c626 95.8% 100.0%); }
