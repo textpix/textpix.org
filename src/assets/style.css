@@ -186,11 +186,14 @@ main { padding: 0 var(--gutter) 4rem; }
 .join > p { max-width: 30rem; }
 .signup label { display: block; font: 500 1rem/1.4 var(--sans); margin-bottom: 0.4rem; }
 .signup-row { display: flex; flex-wrap: wrap; gap: 0.5rem; max-width: 30rem; }
-.signup input[type="email"] {
+.signup input[type="email"], .signup input[type="text"] {
   flex: 1 1 14rem; min-width: 0; font: inherit; font-size: 1rem;
   padding: 0.7rem 0.8rem; border: 1px solid var(--muted); border-radius: 2px;
   background: var(--field); color: var(--ink);
 }
+.signup-names { margin-bottom: 0.75rem; }
+.signup-field { flex: 1 1 10rem; min-width: 0; }
+.signup-field input { width: 100%; box-sizing: border-box; }
 .footer-meta { font-family: var(--sans); font-size: 1rem; align-self: end; }
 .social { list-style: none; padding: 0; margin: 0 0 1rem; display: flex; gap: 1rem; }
 .fine { color: var(--muted); font-size: var(--step--1); }

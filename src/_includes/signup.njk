@@ -1,9 +1,20 @@
 {# Mailing-list sign-up. Uses Brevo when configured in site.yaml. #}
 {% if site.brevo.form_action %}
 <form class="signup" action="{{ site.brevo.form_action }}" method="post">
-  <label for="signup-email-{{ signupId or 'footer' }}">Email address</label>
+  {% set sid = signupId or 'footer' %}
+  <div class="signup-row signup-names">
+    <div class="signup-field">
+      <label for="signup-first-{{ sid }}">First name</label>
+      <input id="signup-first-{{ sid }}" type="text" name="FIRSTNAME" autocomplete="given-name">
+    </div>
+    <div class="signup-field">
+      <label for="signup-last-{{ sid }}">Last name</label>
+      <input id="signup-last-{{ sid }}" type="text" name="LASTNAME" autocomplete="family-name">
+    </div>
+  </div>
+  <label for="signup-email-{{ sid }}">Email address</label>
   <div class="signup-row">
-    <input id="signup-email-{{ signupId or 'footer' }}" type="email" name="EMAIL" autocomplete="email" required placeholder="you@example.com">
+    <input id="signup-email-{{ sid }}" type="email" name="EMAIL" autocomplete="email" required placeholder="you@example.com">
     {# Brevo's spam trap: must stay empty. #}
     <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" class="trap">
     <input type="hidden" name="locale" value="en">
