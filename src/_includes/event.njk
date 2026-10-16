@@ -1,5 +1,6 @@
 {# One event row. Expects `e` and `site`; set `past` for archive styling. #}
 <article class="event{% if past %} event-past{% endif %}"{% if not past %} data-event-date="{{ e.date | isoDate }}"{% endif %}>
+  {% if not past %}
   <p class="event-date">
     <time datetime="{{ e.date | isoDate }}">
       <span class="event-month">{{ e.date | monthShort }}</span>
@@ -7,6 +8,7 @@
       <span class="event-year">{{ e.date | year }}</span>
     </time>
   </p>
+  {% endif %}
   <div class="event-body">
     {% if e.title %}<h3>{{ e.title }}</h3>{% endif %}
     {% if e.presenters %}

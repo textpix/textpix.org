@@ -148,13 +148,13 @@ main { padding: 0 var(--gutter) 4rem; }
 .event-image { grid-column: 2; margin: 1rem 0 0; max-width: 28rem; }
 
 .semester h2 { font-size: var(--step-1); padding-top: 2.5rem; }
-.event-past { grid-template-columns: 9rem minmax(0, 1fr); padding: 1.1rem 0; }
-.event-past .event-month { font-size: 2rem; color: var(--ink); }
+.event-past { grid-template-columns: minmax(0, 1fr); padding: 1.1rem 0; }
+.event-past .event-image { grid-column: 1; }
 .event-past h3 { font-size: var(--step-0); font-weight: 500; color: var(--muted); }
 .event-past .presenters { margin: 0; }
 
 @media (max-width: 34rem) {
-  .event, .event-past { grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0 0.75rem; }
+  .event { grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0 0.75rem; }
   .event-month { font-size: 1.9rem; }
   .event-day { font-size: 1.125rem; }
   .event-image { grid-column: 1 / -1; }

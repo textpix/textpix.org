@@ -90,6 +90,28 @@
     - name: Tom Rankin
     - name: Ama Kyereme
 
+# Fall 2025: presenters from Lauren Neefe's list (2026-10-15); exact days
+# not recorded, so these dates are placeholders inside the semester, in
+# the order Lauren gave. The archive shows only the semester.
+- date: 2025-09-01
+  presenters:
+    - name: Paul Batchelor
+    - name: Elizabeth Webb
+
+- date: 2025-10-01
+  presenters:
+    - name: Lauren Neefe
+
+- date: 2025-11-01
+  presenters:
+    - name: Ellen Raimond
+    - name: Xiaomeng Yan
+
+- date: 2025-12-01
+  presenters:
+    - name: Dennis Szerszen
+    - name: Bren Vienrich-Felling
+
 - date: 2026-01-26
   time: 6–8 pm
   presenters:
