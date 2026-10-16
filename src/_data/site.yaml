@@ -24,8 +24,8 @@ venue:
 #                form_action is blank, as a "Join the mailing list" button.
 # With both blank, the button opens an email to the address above.
 brevo:
-  form_action: ""
-  form_link: ""
+  form_action: "https://e6d24efa.sibforms.com/serve/MUIFAM4SPqt-CvpKktfYjBOCWHdrGgkd_UOLuADeGDNKanndkI7TF5oj1JnVozbZch0Ln9To8apHjnFDoQCxG1r2g-xScl_CQyfeCkR7Gs9cFq3K0nehl2PxQdK-n9ys1uGayWZCUaBF-8PZDSb7bPUcUPJOv0b5ykGi-IdFgNxmIEv-p1nrNtaVTvEzo_GPwmRMxZNoDMvoEFqvIg=="
+  form_link: "https://e6d24efa.sibforms.com/v2/serve/MUIFAM4SPqt-CvpKktfYjBOCWHdrGgkd_UOLuADeGDNKanndkI7TF5oj1JnVozbZch0Ln9To8apHjnFDoQCxG1r2g-xScl_CQyfeCkR7Gs9cFq3K0nehl2PxQdK-n9ys1uGayWZCUaBF-8PZDSb7bPUcUPJOv0b5ykGi-IdFgNxmIEv-p1nrNtaVTvEzo_GPwmRMxZNoDMvoEFqvIg=="
 
 social:
   instagram: ""   # e.g. https://www.instagram.com/textpixcollective
